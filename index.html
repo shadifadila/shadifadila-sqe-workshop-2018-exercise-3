@@ -1,62 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
+<html>
+<head>
+    <title>Lab-2</title>
+    <meta charset="utf-8" />
+    <style>
+        span {
+            font-family:'Segoe UI';
+            font-weight:600;
+        }
+        .txt{
+            border: 1px solid #CCC;
+            width:400px;
+            height:30px;
+            font-family:'Segoe UI';
+            font-weight:600;
+            font-size:16px;
+        }
+        .btn {
+            background-color:#00b4ee;
+            border:1px solid #CCC;
+            border-radius:5px 5px ;
+            color:white;
+            font-family:'Segoe UI';
+            width:300px;
+            height:40px;
+            font-weight:600;
+            font-size:20px;
 
-        <style>
-            table {
-                width: 100%;
-                height: 100%;
-            }
 
-            .textAreaWrapper {
-                width: 100%;
-                height: 80vh;
-            }
+        }
+        #result span {
+            font-family:'Segoe UI';
+            font-size: 16px !important;
+            color:white;
+            background-color:black;
+        }
 
-            textarea {
-                width: 80%;
-                height: 95%;
-            }
-        </style>
-    </head>
-    <body>
-        <table>
-            <tr>
-                <td>
-                    <div>
-                        <label>Enter code here</label>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <label>Parsed code here</label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="textAreaWrapper">
-                        <textarea id="codePlaceholder" title="Enter code here"></textarea>
-                    </div>
-                </td>
-                <td>
-                    <div class="textAreaWrapper">
-                        <textarea id="parsedCode" title="Parse code"></textarea>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div>
-                        <button id="codeSubmissionButton">Parse code</button>
-                    </div>
-                </td>
-                <td>
-                </td>
-            </tr>
-        </table>
+    </style>
 
-        <script src="dist/bundle.js"></script>
-    </body>
+</head>
+<body>
+
+<table align="center" style="width: 100%">
+    <tr>
+        <td><h1 style="font-family:'Segoe UI'; color:#00528d;">Predicate</h1></td>
+        <td style="text-align: right">
+            <button class="btn" id="codeSubmissionButton">Start</button>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center" colspan="2">
+            <table align="center" style="width: 100%">
+                <tr>
+                    <td style="border-right:3px solid #CCC; width:550px;">
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="width:63px; text-align: left; font-size:18px;"><span>Input :</span></td>
+                                <td style="text-align: left">
+                                    <input class="txt" id="txtinput" type="text" /></td>
+                            </tr>
+                            <tr style="vertical-align:top;">
+                                <td style="width:63px; text-align: left; font-size:18px; vertical-align:top; "><span>Code :</span></td>
+                                <td style="text-align: left">
+                                    <textarea id="txtcode" class="txt" style="height:100% !important; font-size:12px;" rows="40" name="S2" rows="2" cols="20"></textarea></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td  style="vertical-align:top;">
+
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="width:63px; text-align: left; font-size:18px; vertical-align:top; "><span>Result :</span></td>
+                            </tr>
+                            <tr style="vertical-align:top;">
+                                <td style="text-align: left">
+                                    <div id="result" style="width:99%; background-color:black; color:white; border:5px solid #CCC; min-height:500px; padding:5px 5px 5px 5px;"><span></span></div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<script src="dist/bundle.js"></script>
+</body>
 </html>
