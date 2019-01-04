@@ -1,2 +1,3 @@
 import './code-analyzer.test';
-import './SymbolicAndColor.test';
+import './graph.test';
+
